@@ -1,0 +1,207 @@
+*{
+    box-sizing: border-box;
+}
+  
+body{
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+    background-color: #000;
+}
+  
+#myVideo{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+}
+  
+.content{
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+  
+#myBtn{
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+  
+#myBtn:hover{
+    background: #ddd;
+    color: black;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: hsl(0, 20%, 96%);
+    text-decoration: none;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(2, 88, 248, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+.dropdown-content a{
+    text-decoration: none;
+    color: black;
+}
+.dropdown-content a:hover{
+    color: rgb(75, 75, 75);
+    border-bottom: 2px solid;
+}
+.dropdown:hover .dropdown-content{
+    display: inline-block;
+}
+.hold{
+    margin: 10px;
+    padding-top: 10px;
+    color: white;
+}
+.grid-container{
+    display: grid;
+    grid-template-rows: repeat(2, 100px) 150px;
+    grid-template-columns: repeat(3, 100px);
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+}
+.grid-container > article{
+    border: 1px solid black;
+    text-align: center;
+}
+.flex-container{
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+.Artemis, .Apollo, .-null-, .Specialist-Polo, .Priest-Entity-Nada{
+    background-color: black;
+    color: black;
+    outline: solid;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding: 20px
+}
+header h2{
+    text-align: center;
+    color: aqua;
+}
+header p{
+    text-align: center;
+    text-decoration: none;
+}
+header p a{
+    color: wheat;
+    text-decoration: none;
+    outline-style: inherit;
+}
+header p a:hover{
+    background-color: black;
+    outline-style: solid;
+}
+.Artemis:hover, .Apollo:hover, .-null-:hover, .Specialist-Polo:hover, .Priest-Entity-Nada:hover{
+    animation-name: colorChanger;
+    animation-duration: 4s;
+    transform: rotateX(350deg);
+    transition-duration: 2s;
+}
+@keyframes colorChanger {
+    from {background-image: url(../images/NoMansSky.jpg);}
+    to {background-color: white;}
+}
+footer{
+    padding-top: auto;
+    color: blue;
+    text-align: center;
+}
+body > div{
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+fieldset{
+    border: white;
+    padding: 15px;
+    background-color: aqua;
+    margin-bottom: 15px;
+}
+  
+fieldset label{
+    margin-left: 15px;
+    display: inline-block;
+    width: 170px;
+    font-size: 1.2em;
+}
+.gamespot, .ign, .tweakers{
+    color: red;
+}
+input{
+    display: inline-block;
+    width: 350px;
+    margin-bottom: 5px;
+}
+  
+form p{
+    margin-bottom: 0;
+}
+  
+input[type="submit"] {
+    padding: 15px ;
+    width: auto;
+    margin-left: 10px;
+    border-radius: 15px / 5px;
+    font-size: 1em;
+}
+  
+input[type="checkbox"], input[type="radio"], input[type="number"] {
+    width: auto;
+}
+  
+#frmOrder input[type="submit"] {
+    border-radius: 5px;
+}
+@media screen and (max-width: 960px){
+    body {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 3fr 1fr 3em;
+        grid-template-areas: 
+        "header header"
+        "main main"
+        "footer footer";
+    }
+
+    header nav ul li {
+        display: block;
+    }
+}
+@media print {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "main";
+    }
+    header {
+        display: none;
+    }
+    footer {
+        display: none;
+    }    
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/mainstyle.css">
+    <title>No Man Sky</title>
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="video/nomansky.mp4" type="video/mp4">
+    </video>
+      <header>
+        <div class="content">
+            <h1>About No Mans Sky</h1>
+            <p>No Man's Sky is an action-adventure survival game played from a first or third person perspective that allows players to engage in four principal activities: exploration, survival, combat, and trading.</p>
+            <button id="myBtn" onclick="myFunction()">Pause</button>
+          </div>
+      </header>
+
+      <nav>
+        <div class="dropdown">
+            <span class="hold">=></span>
+            <div class="dropdown-content">
+                <a href="characters.html">Characters</a><br><br>
+                <a href="order.html">Order</a><br><br>
+                <a href="ratings.html">Ratings</a><br>
+            </div>
+          </div>
+      </nav>
+      <script>
+      var video = document.getElementById("myVideo");
+      var btn = document.getElementById("myBtn");
+      
+      function myFunction() {
+        if (video.paused) {
+          video.play();
+          btn.innerHTML = "Pause";
+        } else {
+          video.pause();
+          btn.innerHTML = "Play";
+        }
+      }
+      </script>
+    <footer>
+        <p>©Copyright Thibault Coussement</p>
+    </footer>
+</body>
+</html>

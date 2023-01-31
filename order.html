@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/mainstyle.css">
+    <title>Order No Man Sky</title>
+</head>
+<body>
+    <header>
+        <h2>Order</h2>
+        <p>
+            <a href="index.html"><span>Home</span></a> 
+            <a href="ratings.html"><span>Ratings</span></a> 
+            <a href="characters.html"><span>Characters</span></a>
+        </p>
+    </header>
+    <div>
+        <form action="" method="POST" id="frmOrder">
+          <fieldset>
+            <label for="txtName">Naam*</label>
+                <input type="text" name="name" id="txtUser" placeholder="Naam" required/>
+            <label for="txtEmail">Email*</label>
+                <input type="text" name="email" id="txtEmail" placeholder="Email" required/>
+            <label for="PhoneNumber">PhoneNumber</label>
+                <input type="text" name="phonenumber" id="txtPhoneNumber" placeholder="Phonenumber" optional/>
+            <label for="Adres">Adres*</label>
+                <input type="text" name="Adres" id="txtAdres" placeholder="Adres" required>
+            <label for="Delivery">Delivery</label>
+            <select name="Delivery" id="Delivery">
+                <option value="Shop Pickup">Shop Pickup</option>
+                <option value="Home Delivery">Home Delivery</option>
+                <option value="Pick Up Point">Pick Up Point</option>
+            </select>
+            <br><label for="Amount">Amount</label>
+                <input type="number" name="Amount" id="Amount" placeholder="Amount">
+          </fieldset>
+          <input type="submit" value="Purchase" />
+        </form>
+        <footer>
+            <p>©Copyright Thibault Coussement</p>
+        </footer>
+</body>
+</html>
